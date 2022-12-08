@@ -2,7 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { useRtc } from './useRtc';
+import { useRtm } from './useRtm';
+
 function App() {
+  const { joinRtc } = useRtc()
+  const { joinRtm } = useRtm()
+
+  joinRtc()
+  
   return (
     <div className="App">
       <header className="App-header">
